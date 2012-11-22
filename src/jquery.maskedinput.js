@@ -159,6 +159,11 @@
 
 						var p = seekNext(pos.begin - 1);
 						if (p < len) {
+							if (settings.upcase) {
+							 	var c = String.fromCharCode(k).toUpperCase();
+							} else {
+							 	var c = String.fromCharCode(k);
+							}
 							var c = String.fromCharCode(k);
 							if (tests[p].test(c)) {
 								shiftR(p);
